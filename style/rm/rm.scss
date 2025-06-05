@@ -1,0 +1,134 @@
+/*
+  ResponsiveMenu - v.alpha
+  Mikołaj Kaźmierczak 2018
+  Be nice, don't steal code.
+*/
+
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+$rmHeight: 50px;
+$rmColor: #fff;
+$rmColorSecondary: rgb(240,240,240);
+$rmFontColor: #000;
+
+
+.rm-panel {
+  z-index: 1;
+  position: fixed;
+  top: $rmHeight;
+  left: 0;
+  transform: translateX(-100%);
+  width: 100%;
+  height: calc(100% - #{$rmHeight});
+  background-color: $rmColor;
+  color: $rmFontColor;
+}
+  .rm-panel__menu {
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+  }
+
+
+
+
+.rm {
+  z-index: 2;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: $rmHeight;
+  background-color: $rmColor;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: $rmFontColor;
+} 
+  .rm-display {
+    position: relative;
+    flex-grow: 1;
+    height: 100%;
+    background-color: $rmColor;
+  }
+    .rm-more {
+      z-index: 1;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      display: flex;
+      transform: translateX(100%);
+      width: auto;
+      max-width: 100%;
+      height: 100%;
+      background-color: $rmColorSecondary;
+    }
+      .rm-more__menu {
+        overflow: auto;
+        display: flex;
+        height: 100%;
+      }
+    .rm-title-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+      .rm-title {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        text-decoration: none;
+      }
+        .rm-title__logo {
+          height: 100%;
+        }
+        .rm-title__text {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+
+          color: $rmFontColor;
+        }
+          .rm-title__text h1,
+          .rm-title__text h2,
+          .rm-title__text h3,
+          .rm-title__text h4,
+          .rm-title__text h5,
+          .rm-title__text h6 {
+            display: inline;
+            align-items: center;
+          }
+          .rm-title__text h1 { font-size: 21px; }
+          .rm-title__text h2 { font-size: 19px; }
+          .rm-title__text h3 { font-size: 17px; }
+          .rm-title__text h4 { font-size: 15px; }
+          .rm-title__text h5 { font-size: 13px; }
+          .rm-title__text h6 { font-size: 11px; }
+
+  .rm-button {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: $rmColor;
+    cursor: pointer;
+    user-select: none;
+  }
+  .rm-button--left {
+    padding: 0 10px 0 10px; 
+  }
+  .rm-button--right {
+    padding: 0 10px 0 10px; 
+  }
+    .rm-button__icon--close {
+      display: none;
+    }
+    .rm-button__text {
+      margin-left: 10px;
+    }

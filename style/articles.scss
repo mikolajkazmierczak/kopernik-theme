@@ -1,0 +1,98 @@
+// .articles {}
+
+  .articles__title {
+    font-family: $fontTitle;
+    text-align: center;
+    padding-top: 40px;
+  }
+  // @include breakpoint( $brBig ) {
+  //   .articles__title {
+  //     padding-top: 80px;
+  //   }
+  // }
+  
+  .articles__wrapper {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0 0 20px;
+  }
+
+    .card-article {
+      position: relative;
+      border: solid 1px rgb(190, 190, 190);
+      border-radius: $sizeBorderRadiusMain;
+      margin: 0 20px 20px 0;
+      padding: 20px;
+      min-width: 260px;
+      width: 100%;
+      background-color: $colorWhite;
+      transition: background-color $tFast;
+    }
+    .card-article:hover {
+      background-color: $colorLightGrey;
+    }
+    @include breakpoint( $brMedium ) {
+      .card-article {
+        width: 30%;
+      }
+    }
+    @include breakpoint( $brBig ) {
+      .card-article {
+        width: 25%;
+      }
+    }
+      .card-article__number {
+        z-index: 0;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 35px;
+        color: $colorLightGrey;
+        font-family: $fontOswald;
+        font-weight: 900;
+      }
+      .card-article__title {
+        z-index: 1;
+        position: relative;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+      .card-article__meta {
+        z-index: 1;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      .card-article__excerpt {
+        z-index: 1;
+      }
+
+  .articles__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  @include breakpoint( $brBig ) {
+    .articles__button {
+      padding-bottom: 80px;
+    }
+  }
+
+
+@media only screen and (max-width: $brSmall) {
+  .articles__wrapper--small-row {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 20px 0 0 20px;
+    // width: 100%;
+  }
+
+    .articles__ending-bar {
+      border-radius: 25px 0 0 25px;
+      margin-bottom: 20px;
+      padding: 0 10px 0 0;
+      background-color: $colorThemeSecondary;
+    }
+}

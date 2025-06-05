@@ -1,0 +1,182 @@
+.post {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  transition: box-shadow $tSlow;
+}
+.post--bg-layout {
+  box-shadow:
+    inset  200px 0px 300px -164px rgb(214, 214, 214),
+    inset -200px 0px 300px -164px rgb(214, 214, 214);
+}
+.article--bg-layout {
+  box-shadow:
+    inset  200px 0px 300px -164px rgb(230, 230, 230),
+    inset -200px 0px 300px -164px rgb(230, 230, 230)
+    !important;
+  // box-shadow: none !important;
+  background-image:
+    url('assets/imgs/newspaper-left.jpg'),
+    url('assets/imgs/newspaper-right.jpg');
+  background-position:
+    left top,
+    right top;
+  background-repeat: repeat-y;
+}
+  .post__title-wrapper {
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    background-color: $colorThemeBright;
+  }
+    .post__title {
+      padding: $sizePostPadding;
+      max-width: $sizePostMaxWidth;
+      font-family: $fontTitle;
+      text-align: center;
+    }
+    @include breakpoint($brMedium) {
+      .post__title {
+        padding:
+          40px $sizePostPadding;
+      }
+    }
+
+    .post__title--article {
+      padding:
+        30px $sizePostPadding
+        0px $sizePostPadding;
+    }
+    @include breakpoint($brMedium) {
+      .post__title--article {
+        padding:
+          60px $sizePostPadding
+          0px $sizePostPadding;
+      }
+    }
+
+  .post__meta {
+    display: flex;
+    justify-content: center;
+    padding:
+      5px $sizePostPadding
+      15px $sizePostPadding;
+    max-width: $sizePostMaxWidth;
+  }
+
+  .post__content {
+    padding:
+      20px $sizePostPadding
+      40px $sizePostPadding;
+    width: 100%;
+    max-width: $sizePostMaxWidth;
+
+    h1, h2 {
+      margin: 30px 0 20px 0;
+    }
+    h3, h4, h5, h6 {
+      margin: 20px 0 20px 0;
+    }
+    @include breakpoint($brBig) {
+      h1, h2 {
+        margin: 40px 0 20px 0;
+      }
+      h3, h4, h5, h6 {
+        margin: 30px 0 20px 0;
+      }
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .p--justify {
+      text-align: justify;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      word-wrap: break-word;
+    }
+
+    blockquote {
+      border-left: solid 2px $colorGrey;
+      margin: 0 0 20px 10px;
+      padding: 5px 0 5px 15px;
+      font-style: italic;
+    }
+    @include breakpoint($brMedium) {
+      blockquote {
+        margin: 0 10% 20px 10%;
+        padding: 15px 0 15px 25px;
+      }
+    }
+    @include breakpoint($brBig) {
+      blockquote {
+        margin: 0 15% 20px 15%;
+      }
+    }
+    
+    img {
+      margin: 5px 0 5px 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    img:not(.antii) {
+      height: auto;
+    }
+    
+    .antii__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px !important;
+    }
+      img.antii {
+        width: initial;
+        margin: 0 20px 20px 20px;
+      }
+
+    iframe {
+      width: 100%;
+    }
+  }
+  @include breakpoint($brMedium) {
+    .post__content {
+      padding:
+        40px $sizePostPadding
+        80px $sizePostPadding;
+    }
+  }
+
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.meta--centered .meta {
+  justify-content: center;
+}
+.meta--boxed .meta {
+  border-radius: $sizeBorderRadiusMain;
+  padding: 3px 0 3px 10px;
+  background-color: $colorLightGrey;
+}
+  .meta__item {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 10px;
+    height: 100%;
+  }
+    .meta__img {
+      margin-right: 5px;
+      height: 18px;
+    }
+    .meta__text {
+      white-space: nowrap;
+    }

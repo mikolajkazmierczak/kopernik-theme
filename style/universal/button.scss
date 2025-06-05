@@ -1,0 +1,80 @@
+.button {
+  display: inline-block;
+  border-radius: 100px;
+  border: solid 4px $colorThemeSecondary;
+  background-color: $colorThemeSecondary;
+  transition: background-color $tFast;
+}
+.button:hover {
+  background-color: $colorWhite;
+  background-color: rgba(0,0,0,0);
+}
+  .button__text {
+    display: inline-block;
+    padding: 10px 20px;
+    color: $colorWhite;
+    font-size: 13px;
+    font-weight: 900;
+    transition: color $tFast;
+  }
+  .button:hover .button__text {
+    color: $colorThemeSecondary;
+  }
+
+
+.button--big .button__text {
+  font-size: 18px;
+}
+
+
+.button--color-main {
+  border-color: $colorThemeMain;
+  background-color: $colorThemeMain;
+}
+  .button--color-main:hover .button__text {
+    color: $colorThemeMain;
+  }
+
+
+.button--color-dark {
+  border-color: $colorThemeDark;
+  background-color: $colorThemeDark;
+}
+  .button--color-dark:hover .button__text {
+    color: $colorThemeDark;
+  }
+
+
+.button--pagination {
+  align-self: center;
+  margin: 0 20px;
+}
+
+.rm-button--panel {
+  overflow: hidden;
+  width: auto;
+  padding: 0 20px;
+  transition: width 200ms, padding 200ms;
+}
+.rm-button--panel--not-animated {
+  transition: width 0ms, padding 0ms;
+}
+.rm-button--panel--off {
+  width: 0 !important;
+  padding: 0 !important;
+}
+
+.cookies-consent__button {
+  border-color: $colorThemeBright;
+  background-color: $colorThemeBright;
+  .button__text {
+    padding: 5px 10px;
+    color: #403e41;
+  }
+}
+.cookies-consent__button:hover {
+  background-color: #403e41;
+  .button__text {
+    color: $colorThemeBright;
+  }
+}

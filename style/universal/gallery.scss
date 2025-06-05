@@ -1,0 +1,65 @@
+/* album tile */
+.foogallery-pile-inner a img {
+  margin: 0;
+}
+div[class*=foogallery] a {
+  word-break: normal;
+}
+div[class*=foogallery] a h3 {
+  opacity: 0.75 !important;
+}
+
+
+/* gallery */
+.foogallery-album-header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.foogallery.foogallery-container.foogallery-default.foogallery-lightbox-dfactory.fg-gutter-10.fg-center.fg-default.fg-light.fg-loading-partial.fg-loaded-fade-in.fg-custom.fg-hover-scale.fg-caption-always.fg-hover-fade {
+  margin-bottom: 10px;
+} 
+  .fg-item {
+    width: 125px;
+    height: 125px;
+  }
+  @include breakpoint($brMedium) {
+    .fg-item {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+
+/* responsive lightbox */
+.foogallery-album-gallery-list .foogallery-pile .foogallery-pile-inner {
+  border: none !important;
+  will-change: transform;
+  transition: transform $tFast;
+}
+.foogallery-pile-inner:hover { transform: scale(1.05); }
+.foogallery-pile::before { display: none; }
+.foogallery-pile::after  { display: none; }
+
+.tos-close, .tos-next, .tos-prev {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+}
+.tos-next.tos-disabled, .tos-prev.tos-disabled {
+  opacity: 0;
+}
+.tos-close span::before, .tos-close span::after,
+.tos-next span, .tos-prev span {
+  border-color: #000;
+}
+.tos-desktop .tos-wrapper:hover .tos-close.tos-disabled,
+.tos-desktop .tos-wrapper:hover .tos-next.tos-disabled,
+.tos-desktop .tos-wrapper:hover .tos-prev.tos-disabled,
+.tos-touch .tos-wrapper.tos-hover .tos-close.tos-disabled,
+.tos-touch .tos-wrapper.tos-hover .tos-next.tos-disabled,
+.tos-touch .tos-wrapper.tos-hover .tos-prev.tos-disabled {
+  opacity: 0;
+}

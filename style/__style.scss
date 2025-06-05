@@ -1,0 +1,94 @@
+/**
+Theme Name: KopernikTheme
+Author: Mikołaj Kaźmierczak
+Description: Theme for Kopernik Kalisz website
+Version: 2.0.0
+Website: http://www.kopernik.kalisz.pl/
+--------------------------
+Be nice, don't steal code.
+--------------------------
+*/
+
+/*
+Contents:
+  0 Normalize
+  1 Variables
+  2 Sass mixins
+  3 Core
+  4 Universal
+    4.1 Button
+    4.2 Search
+    4.3 Gallery
+    4.4 Slider
+    4.5 Tables
+    4.6 Pagination
+    4.7 Post
+  5 RM
+    5.1 Menus
+    5.2 RM Customization
+  6 Main
+    6.1 Sections
+    6.2 Graphics
+  7 Articles
+  8 Footer 
+*/
+
+/* 0 Normalize */
+@import "_normalize.scss";
+
+/* 1 Variables */
+@import "_var.scss";
+
+/* 2 Sass mixins */
+@import "_mixins.scss";
+
+/* 3 Core */
+@import "_core.scss";
+
+/* 4 Universal */
+@import "universal/universal.scss";
+
+  /* 4.1 Button */
+  @import "universal/button.scss";
+
+  /* 4.2 Search */
+  @import "universal/search.scss";
+
+  /* 4.3 Gallery */
+  @import "universal/gallery.scss";
+
+  /* 4.4 Slider */
+  @import "universal/slider.scss";
+
+  /* 4.5 Tables */
+  @import "universal/tables.scss";
+
+  /* 4.6 Pagination */
+  @import "universal/pagination.scss";
+
+  /* 4.7 Post */
+  @import "universal/post.scss";
+
+/* 5 RM */
+@import "rm/rm.scss";
+
+  /* 5.1 Menus */
+  @import "rm/menus.scss";
+
+  /* 5.2 RM Customization */
+  @import "rm/rm-custom.scss";
+
+/* 6 Main */
+@import "main/main.scss";
+
+  /* 6.1 Section */
+  @import "main/main-sections.scss";
+
+  /* 6.3 Graphics */
+  @import "main/main-graphics.scss";
+
+/* 7 Articles */
+@import "articles.scss";
+  
+/* 8 Footer */
+@import "footer.scss";

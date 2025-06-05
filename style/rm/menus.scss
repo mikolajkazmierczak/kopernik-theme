@@ -1,0 +1,176 @@
+// [ul] top whole menu container
+.menu {
+  margin: 0;
+  padding: 0;
+}
+  // [li] the main building parts
+  .menu-item       { list-style: none; }
+  .menu-item:hover { user-select: none; }
+  // // when the .sub-menu of .menu-item is visible
+  // .menu-item--menu-opened {}
+    // text of the .menu-item
+    .menu-item a { text-decoration: none; }
+    // [ul] container for sub-items (.menu-items) in the items (.menu-items)
+    .sub-menu {
+      margin: 0;
+      padding: 0;
+      display: none;
+    }
+      // // text of the .menu-items in .sub-menus
+      // .sub-menu .menu-item a {}
+      // // custom css like 'list-style' dot
+      // .sub-menu .menu-item a:before {}
+
+  // // .menu-item that holds .sub-menus
+  // .menu-item-has-children {}
+  // .menu-item-has-children:hover {}
+  //   .menu-item-has-children > a {}
+
+
+
+
+$colorMenuDark:  $colorThemeDark;
+$colorMenuDarkClicked:  $colorBlack;
+
+$colorRmMenuMore:  #f0f0f0;
+$colorMenuItemHover: $colorThemeBright;
+$sizeMenuItemMoreHoverBorder: 4px;
+
+.rm-panel__menu {
+
+  // [ul] top whole menu container
+  .menu {
+    width: 100%;
+    font-size: 18px;
+  }
+    // [li] the main building parts
+    .menu-item {
+      cursor: pointer;
+      background-color: $colorMenuDark;
+    }
+
+    // when the .sub-menu of .menu-item is visible
+    .menu-item--menu-opened {}
+    .current_page_item a {
+      border-left: solid 5px $colorThemeSecondary !important;
+    }
+
+      // text of the .menu-item
+      .menu-item a {
+        border-radius: 20px;
+        border: solid 1px #888888;
+        margin: 10px;
+
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        color: $colorWhite;
+        font-family: $fontTitle;
+        transition:
+          border $tLightning,
+          background-color $tLightning !important;
+      }
+      .menu-item a:hover {
+        border-left: solid 5px $colorMenuItemHover;
+      }
+        .menu-item__what-is-this-img {
+          margin-right: 10px;
+          width: 20px;
+          height: 20px;
+        }
+        .menu-item__download-img {
+          margin-left: 6px;
+          width: 14px;
+          height: 14px;
+        }
+      // [ul] container for sub-items (.menu-items) in the items (.menu-items)
+      .sub-menu {
+        padding-left: 10px;
+        padding-bottom: 5px;
+      }
+        .sub-menu .menu-item {}
+          // text of the .menu-items in .sub-menus
+          .sub-menu .menu-item a {
+            border-radius: 0;
+            border: solid 0 $colorMenuItemHover;
+            margin: 0;
+
+            position: relative;
+            padding: 8px 12px;
+            font-family: $fontMain;
+          }
+          .sub-menu .menu-item a:hover {
+            border-left: solid 5px $colorMenuItemHover;
+          }
+          @include breakpoint($brBig) {
+            .sub-menu .menu-item a {
+              font-size: 16px;
+            }
+          }
+
+    // .menu-item that holds .sub-menus
+    .menu-item-has-children {}
+    .menu-item-has-children:hover {}
+      .menu-item-has-children > a {
+        padding-right: 30px !important;
+        background-image: url("assets/icons/menu/expand_item.svg?n=1");
+        background-size: 30px;
+        background-position-x: calc(100% - 5px);
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        transition: background-position-x 500ms;
+        font-family: $fontTitle !important;
+      }
+      .sub-menu .menu-item-has-children > a {
+        margin-right: 10px !important;
+      }
+
+}
+
+
+.rm-more__menu {
+
+  .menu {
+    display: flex;
+    white-space: nowrap;
+    padding-left: 15px;
+    font-size: 15px;
+  }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      border-top:    solid 0px $colorRmMenuMore;
+      border-bottom: solid 0px $colorMenuItemHover;
+      margin-right: 15px;
+      transition: border $tLightning;
+    }
+    @include breakpoint( $brBig ) {
+      .menu-item {
+        font-size: 17px;
+      }
+    }
+    // .menu-item:hover {}
+    // .menu-item--menu-opened {}
+    // .current_page_item {}
+    .menu-item:hover, .current_page_item {
+      // color: $colorMenuLinkHover;
+      border-top:
+        solid $sizeMenuItemMoreHoverBorder $colorRmMenuMore;
+      border-bottom:
+        solid $sizeMenuItemMoreHoverBorder $colorMenuItemHover;
+    }
+      .menu-item a {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        color: $colorBlack;
+      }
+      // .sub-menu {}
+      //   .sub-menu .menu-item a {}
+      //   .sub-menu .menu-item a:before {}
+
+    // .menu-item-has-children {}
+    // .menu-item-has-children:hover {}
+    //   .menu-item-has-children > a {}
+
+}

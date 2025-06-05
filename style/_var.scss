@@ -1,0 +1,74 @@
+// ###### ## ###### ###### ######
+// ##     ##    ##  ##     ##
+// ###### ##   ##   ####   ######
+//     ## ##  ##    ##         ##
+// ###### ## ###### ###### ######
+/* sizes */
+$sizeVrHeader: 55px;
+
+$sizePostMaxWidth: 650px;
+$sizePostPadding: 20px;
+
+$sizeBorderRadiusMain: 10px;
+
+/* breakpoints */
+// see also: breakpoint() mixin
+$brSmall: 550px;
+$brMedium: 780px;
+$brBig: 1000px;
+
+/* z-indexes */
+
+/* transitions */
+$tLightning: 0.1s;
+$tFast:   0.25s;
+$tNormal: 0.5s;
+$tSlow:   1s;
+
+// #### ###### ##   ###### ###### ######
+// ##   ##  ## ##   ##  ## ##  ## ##
+// ##   ##  ## ##   ##  ## ###### ######
+// ##   ##  ## ##   ##  ## ## ##      ##
+// #### ###### #### ###### ##  ## ######
+/* colors */
+// $colorBlack: #303030;
+$colorBlack: #000;
+$colorGrey: #555555;
+$colorLightGrey: #e7e7e7;
+$colorWhite: #ffffff;
+
+$colorThemeMain: #44318d; //#d1313f
+$colorThemeSecondary: #44318d;
+$colorThemeBright: #ffc118;
+$colorThemeDark: #262228;
+$colorThemeTableBorder: #bebebe;
+
+$colorLink: #C0C0C0; //#d63e3e;
+$colorLinkHover: #929292; //#c42121;
+$colorBlockquote: #555555;
+
+
+/* shadows */
+$shadowHard: 0 0 20px rgba(50, 50, 50, 0.5);
+$shadowLite: 0 0 5px rgba(0,0,0,0.25);
+$shadowLiteLine:
+  0  1px 0 rgba(0,0,0,0.25),
+  0 -1px 0 rgba(0,0,0,0.25),
+   1px 0 0 rgba(0,0,0,0.25),
+  -1px 0 0 rgba(0,0,0,0.25);
+$shadowLiteBottomLine: 0 1px 0 rgba(0,0,0,0.25);
+
+// ###### ###### ##  ## ###### ######
+// ##     ##  ## ### ##   ##   ##
+// ####   ##  ## ######   ##   ######
+// ##     ##  ## ## ###   ##       ##
+// ##     ###### ##  ##   ##   ######
+/* fonts */
+  
+  /* google fonts */
+  $fontOswald: 'Oswald', sans-serif;
+  $fontMuli:   'Muli',   sans-serif;
+  $fontPlayfairDisplay: 'Playfair Display', serif;
+
+$fontMain:  $fontMuli;
+$fontTitle: $fontPlayfairDisplay;

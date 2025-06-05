@@ -1,0 +1,83 @@
+/* columns */
+.columns {
+  columns: 1;
+}
+.columns--2 { columns: 2; }
+.columns--3 { columns: 2; }
+.columns--4 { columns: 2; }
+.columns--5 { columns: 2; }
+.columns--6 { columns: 2; }
+.columns--mobfull { columns: 1; }
+  .columns__item {
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+  }
+@media only screen and (min-width: 600px) {
+  .columns {
+    columns: 1;
+  }
+  .columns--2 { columns: 2; }
+  .columns--3 { columns: 3; }
+  .columns--4 { columns: 4; }
+  .columns--5 { columns: 5; }
+  .columns--6 { columns: 6; }
+    // .columns__item { }
+}
+
+/* logo */
+.kopernik-logo {
+  display: flex;
+  align-items: center;
+}
+  .kopernik-logo__img {
+    margin-right: 10px;
+    height: 60px;
+  }
+  @include breakpoint($brBig) {
+    .kopernik-logo__img {
+      margin-right: 20px;
+      height: 90px;
+    }
+  }
+  .kopernik-logo__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $fontTitle;
+    color: $colorWhite;
+    h1 { font-size: 30px; }
+    h2 { font-size: 25px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 19px; }
+    h5 { font-size: 18px; }
+    h6 { font-size: 17px; }
+    @include breakpoint($brBig) {
+      h1 { font-size: 45px; }
+      h2 { font-size: 35px; }
+      h3 { font-size: 30px; }
+      h4 { font-size: 28px; }
+      h5 { font-size: 27px; }
+      h6 { font-size: 26px; }
+    }
+  }
+
+/* language icons */
+.lang {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+  .lang__icon {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+  }
+    .lang__img {
+      width: 35px;
+    }
+
+/* too short site fallback */
+.too-short-site-fallback {
+  width: 100%;
+}

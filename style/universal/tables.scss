@@ -1,0 +1,17 @@
+/* tablepress */
+.wp-table {
+  overflow-x: auto;
+}
+  .tablepress {
+    margin: 10px 0 30px 0 !important;
+    width: calc(100% - 1px);
+  }
+    th, td {
+      border: solid 1px $colorThemeTableBorder !important;
+    }
+    th {
+      background-color: $colorLightGrey !important;
+    }
+    td {
+      background-color: $colorWhite !important;
+    }

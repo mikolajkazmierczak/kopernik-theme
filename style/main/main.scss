@@ -1,0 +1,13 @@
+main {
+  position: relative;
+  width: 100%;
+  background-color: $colorWhite;
+}
+  .slider {
+    // position: fixed;
+    // top: $rmHeight;
+    // left: 0;
+    // width: 100%;
+    background-color: $colorBlack;
+    @include linear-gradient(#8d8d8d, $colorWhite, -90deg);
+  }

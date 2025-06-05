@@ -1,0 +1,44 @@
+/* breakpoint */
+@mixin breakpoint($size) {
+  @media only screen and (min-width: $size) { @content; }
+}
+
+/* width */
+@mixin width($percent) {
+  width: 100%;
+    @include breakpoint($brBig) {
+      width: $percent;
+    }
+}
+
+/* center */
+@mixin center($type, $directions) {
+  @if      $type == "ab" { position: absolute; }
+  @else if $type == "rl" { position: relative; }
+
+  @if $directions == "both" {
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if $directions == "vr" {
+    top:  50%;
+    transform: translateY(-50%);
+  }
+  @else if $directions == "hr" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* gradient */
+@mixin linear-gradient($color1HEX, $color2HEX, $deg) {
+  background: $color1HEX;
+  background: -moz-linear-gradient   ($deg, $color1HEX 0%, $color2HEX 100%);
+  background: -webkit-gradient       (left bottom, right top, color-stop(0%, $color1HEX), color-stop(100%, $color2HEX));
+  background: -webkit-linear-gradient($deg, $color1HEX 0%, $color2HEX 100%);
+  background: -o-linear-gradient     ($deg, $color1HEX 0%, $color2HEX 100%);
+  background: -ms-linear-gradient    ($deg, $color1HEX 0%, $color2HEX 100%);
+  background: linear-gradient        ($deg, $color1HEX 0%, $color2HEX 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1HEX, endColorstr=$color2HEX, GradientType=1 );
+}

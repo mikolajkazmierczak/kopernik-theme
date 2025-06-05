@@ -1,0 +1,112 @@
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: $fontMain;
+  font-size: 17px;
+}
+h1 { font-size: 25px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+@include breakpoint($brMedium) {
+  html, body { font-size: 18px; }
+  h1 { font-size: 40px; }
+  h2 { font-size: 22px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+  h5 { font-size: 14px; }
+  h6 { font-size: 12px; }
+}
+
+a {
+  // link    - unvisited link
+  // visited - visited link
+  // hover   - user mouses over a link
+  // focus   - user clicks on a link
+  // active  - user has clicked a link
+  &         { color: $colorLink; }
+  &:link    { color: $colorLink; }
+  &:visited { color: $colorLink; }
+  &:hover   { color: $colorLinkHover; }
+  &.a--ns         { color: inherit; text-decoration: none; }
+  &.a--ns:link    { color: inherit; text-decoration: none; }
+  &.a--ns:visited { color: inherit; text-decoration: none; }
+  &.a--ns:hover   { color: inherit; text-decoration: none; }
+}
+
+.site-wrapper {
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin-left: 0;
+  width: 100%;
+  background-color: $colorBlack;
+  transition: width 400ms, margin-left 400ms;
+}
+.site-wrapper--not-animated {
+  transition: width 0ms, margin-left 0ms;
+}
+  .site-content {
+    overflow-x: auto;
+    position: relative;
+    width: 100%;
+    background-color: $colorWhite;
+  }
+  .site-content::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    // width: 100%;
+    // height: 100%;
+    // background-color:rgba(0, 0, 0, 0.75);
+  }
+
+
+
+
+.text--page-not-found {
+  text-align: center;
+
+  a {
+    display: block;
+  }
+}
+
+.cookies-consent {
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  border-radius: 10px;
+  border: solid 1px $colorThemeBright;
+  padding: 10px;
+  min-width: 300px;
+  max-width: 75%;
+  background-color: #403e41;
+  transform: translate(-50%, 100%);
+  transition: transform 200ms;
+
+  h4 {
+    color: $colorThemeBright;
+  }
+  h5 {
+    color: #888888;
+  }
+}
+.cookies-consent--disabled {
+  transform: translate(-50%, -10px);
+}
+  .cookies-consent__text {
+    margin-right: 20px;
+  }
+  // .cookies-consent__button in universal > button.scss

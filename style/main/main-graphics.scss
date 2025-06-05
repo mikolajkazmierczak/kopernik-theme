@@ -1,0 +1,40 @@
+.main-graphics {
+  padding: 20px;
+  background-color: $colorWhite;
+}
+@include breakpoint($brBig) {
+  .main-graphics {
+    padding: 20px 15%;
+  }
+}
+  .main-graphics__title {
+    padding: 40px 0 0 0;
+    margin-bottom: 20px;
+    font-family: $fontTitle;
+    text-align: center;
+    color: $colorBlack;
+  }
+  // .main-graphics__wrapper { }
+    .card-graphic {
+      overflow: auto;
+      // box-shadow: $shadowLiteLine;
+      // box-shadow: $shadowLite;
+      // border: solid 1px rgb(190, 190, 190);
+      border-radius: $sizeBorderRadiusMain;
+      background-color: $colorWhite;
+    }
+      .card-graphic__img {
+        display: block;
+        width: 100%;
+        padding: 10px;
+      }
+      .card-graphic__text {
+        padding: 10px;
+        font-size: 11px;
+        text-align: center;
+      }
+      .card-graphic__bottom-bar {
+        width: 100%;
+        height: 5px;
+        background-color: $colorThemeMain;
+      }
